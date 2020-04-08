@@ -1,0 +1,36 @@
+internal/modules/cjs/loader.js:796
+    throw err;
+    ^
+
+Error: Cannot find module 'D:\src_projet\src_projet\gestion_ms\api\app.js'
+    at Function.Module._resolveFilename (internal/modules/cjs/loadinternal/modules/cjs/loader.er.js:793:17)
+    at Fujs:796
+    throw err;
+    ^
+
+Error: Cannot find module 'D:\src_projet\src_projet\gestiointernaln/nction.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+_mmosd\uslteast/sc\jsst/altosa-dseerr.jsv:i7c9e6.
+    throwj se'r
+r ; 
+    a  ^
+
+Error: Cannot fitnd module 'D:\src_projet\src_projet\gestion _Fmusn\cwtri\ownr.-Msoedruvliec.e_.rjess'o
+l v e F ialte nFaumnec t(iionnt.eMrondaull/em.o_druelses/cjs/oloader.js:793:17)
+    at Function.MlovdeuFliel.e_nlaomaed  ((iinntteerrnnaall//mmoodduulleess//ccjjss//llooaaddeerr..jjss::769836::1277))
+
+        aatt  FFuunnccttiioonn..MMoodduullee.._rluonaMda i(ni n(tienrtnearln/amlo/dmuoldeusl/ecsj/sc/jlso/aldoeard.ejrs.:j686:27s):
+1 0 4 3 :a1t0 )F
+u n c t iaotn .iMnotdeurlnea.lr/umnaMiani/nr u(ni_nmtaeirnn_amlo/dmuoldeu.ljess:/1c7j:s1/1l o{a
+d e rc.ojdse::1 0'4M3O:D1U0L)E
+_ N O T _aFtO UiNnDt'e,r
+n a lr/emqauiinr/erSutna_cmka:i n[_]m
+o}d
+ule.js:17:11 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
