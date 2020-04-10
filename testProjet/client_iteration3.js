@@ -1,7 +1,7 @@
 'use strict'
 
-const {expect} = require('code');
-const Lab = require('lab');
+const {expect} = require('@hapi/code');
+const Lab = require('@hapi/lab');
 const lab = exports.lab = Lab.script();
 
 const Restify = require('restify-clients');
@@ -324,6 +324,7 @@ lab.experiment('work request app', () => {
         expect(result.data.stats_wr_opened).to.be.equals(0);
         expect(result.data.stats_wr_closed).to.be.equals(1);
     });
+
 
 });
 

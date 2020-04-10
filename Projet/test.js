@@ -5,17 +5,27 @@ const seneca = Seneca()
 const BodyParser = require('body-parser')
 
 
-var Routes = [{
-    prefix: '/api/wr',
-    pin: 'role:wr,cmd:*',
-    map: {
-        get: {GET: true, name: ''},
-        //: {GET: true, name: '', suffix: '/:id'},
-        edit: {PUT: true, name: '', suffix: '/:id'},
-        create: {POST: true, name: ''},
-        delete: {DELETE: true, name: '', suffix: '/:id'},
+var Routes = [
+    {
+        prefix: '/api/wr/stats',
+        pin: 'role:stats,cmd:*',
+        map: {
+            get :{GET:true,name:'',suffix:'/:applicant?'}
+        }
+    },
+    {
+        prefix: '/api/wr',
+        pin: 'role:wr,cmd:*',
+        map: {
+            get: {GET: true, name: '', suffix: '/:id?'},
+            update: {PUT: true, name: '', suffix: '/:id?'},
+            create: {POST: true, name: ''},
+            delete: {DELETE: true, name: '', suffix: '/:id?'}
     }
-}];
+}
+];
+
+
 
 seneca.use(SenecaWeb, {
     options: { parseBody: false }, // desactive l'analyseur JSON de Seneca
@@ -25,9 +35,14 @@ seneca.use(SenecaWeb, {
 })
 seneca.use('entity')
 seneca.client({      // ce module enverra les messages counter:*
-    port: 4000,      // sur le port 4000 (qui est le port sur lequel le microservice
+    port: 5000,   // sur le port 4000 (qui est le port sur lequel le microservice
+    pin:'role:stats,cmd:*'
 })
-
+seneca.client({      // ce module enverra les messages counter:*
+    port: 4000, // sur le port 4000 (qui est le port sur lequel le microservice
+    pin: 'role:wr,cmd:*',
+})
+//seneca.client({port:5000,})
 // les requetes HTTP sont attendues sur le port 3000
 // Pour tester :
 // - lancer le service counter.js
